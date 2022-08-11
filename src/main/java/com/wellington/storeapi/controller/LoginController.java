@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,7 @@ import com.wellington.storeapi.security.JWTObject;
 import com.wellington.storeapi.security.SecurityConfig;
 
 @RestController
+@CrossOrigin("*")
 public class LoginController {
     @Autowired
     private PasswordEncoder encoder;
